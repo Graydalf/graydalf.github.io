@@ -1,0 +1,21 @@
+@keyframes shadow {
+    0% {
+        box-shadow: -2.5em 0 5em -2em #fff;
+    }
+    50% {
+        box-shadow: 2.5em 0 5em -2em #fff;
+    }
+    100% {
+        box-shadow: -2.5em 0 5em -2em #fff;
+    }
+}
+
+.eclipse {
+    position: relative;
+    margin: 0 auto;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: shadow 30s infinite ease;
+}
