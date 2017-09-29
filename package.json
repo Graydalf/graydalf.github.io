@@ -1,0 +1,25 @@
+{
+  "name": "graydalf.github.io",
+  "version": "1.0.0",
+  "description": "personal web page",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graydalf/graydalf.github.io.git"
+  },
+  "author": "graydalf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Graydalf/graydalf.github.io/issues"
+  },
+  "homepage": "https://github.com/Graydalf/graydalf.github.io#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3"
+  }
+}
