@@ -20,6 +20,10 @@ gulp.task('default', function() {
     .pipe(minifySpace())
     .pipe(gulp.dest('build'));
 
+  gulp.src('src/html/*.*', { base: 'src' })
+    .pipe(minifySpace())
+    .pipe(gulp.dest('build'));
+
   gulp.src('src/css/*.*', { base: 'src' })
     .pipe(minifySpace())
     .pipe(gulp.dest('build'));
