@@ -1,0 +1,57 @@
+/* header */
+
+header {
+  padding: 10vh;
+  background-color: #333;
+}
+
+
+/* nav */
+
+nav {
+  padding: 10vh;
+  background-color: #666;
+}
+
+
+/* main */
+
+main {
+  display: flex;
+}
+
+
+/* aside */
+
+aside {
+  display: inline-block;
+  width: 20%;
+  height: 1000px;
+}
+
+.volume {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.volume * {
+  display: none;
+}
+
+.volume>span {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+
+/* article */
+
+article {
+  display: inline-block;
+  background-color: #ddd;
+  flex: 1;
+  height: 1000px;
+}
