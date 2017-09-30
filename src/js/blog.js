@@ -1,6 +1,45 @@
 (function() {
 
-  var tmpDOM, i, j;
+  var tmpDOM, i, j, usr, get
+
+  get = function(url, callback) {
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+      //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+      xmlhttp = new XMLHttpRequest()
+    } else {
+      // IE6, IE5 浏览器执行代码
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        callback(null, xmlhttp.responseText)
+      } else {
+        callback('err', null)
+      }
+    }
+    xmlhttp.open('GET', url, true)
+    xmlhttp.send()
+  }
+
+  /**
+   * usr
+   */
+  usr = localStorage.getItem('note-usr')
+  if (!usr) {
+    window.location.href = './login.html'
+  }
+
+  get(`http://www.graydalf.com/githubio/note/?usr=${usr.name}&token=${usr.token}`, function(err, data) {
+    if (err) {
+      localStorage.removeItem('note-usr')
+      window.location.href = './login.html'
+      return
+    }
+
+    //TODO data
+    console.log(data);
+  })
 
   /**
    * aside doc-tree hide or show
@@ -28,6 +67,7 @@
       }
     })
   }
+
 
 
 
