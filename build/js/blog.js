@@ -25,20 +25,21 @@
   /**
    * usr
    */
-  usr = localStorage.getItem('note-usr')
-  if (!usr) {
-    window.location.href = '../login.html'
-  }
+  // usr = localStorage.getItem('note-usr')
+  // if (!usr) {
+  //   window.location.href = './login.html'
+  // }
 
-  get(`http://www.graydalf.com/githubio/note/?usr=${usr.name}&token=${usr.token}`, function(err, data) {
-    if (err) {
-      localStorage.removeItem('note-usr')
-      window.location.href = '../login.html'
-    }
+  // get(`http://www.graydalf.com/githubio/note/?usr=${usr.name}&token=${usr.token}`, function(err, data) {
+  //   if (err) {
+  //     localStorage.removeItem('note-usr')
+  //     window.location.href = './login.html'
+  //     return
+  //   }
 
-    //TODO data
-    console.log(data);
-  })
+  //   //TODO data
+  //   console.log(data);
+  // })
 
   /**
    * aside doc-tree hide or show
