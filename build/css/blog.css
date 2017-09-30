@@ -1,16 +1,21 @@
 /* header */
 
-header {
-  padding: 10vh;
-  background-color: #333;
+body {
+  background-color: #eee;
+  color: #333;
 }
 
+a {
+  color: #333;
+}
 
-/* nav */
+a:hover {
+  color: #999;
+}
 
-nav {
-  padding: 10vh;
-  background-color: #666;
+header {
+  /* todo prograss */
+  background-color: #0ff;
 }
 
 
@@ -24,34 +29,112 @@ main {
 /* aside */
 
 aside {
-  display: inline-block;
-  width: 20%;
-  height: 1000px;
+  display: inherit;
+  background-color: #f5f5f5;
+  box-shadow: 6px 8px 20px 0px rgba(0, 0, 0, .14);
 }
 
-.volume {
-  position: absolute;
-  width: auto;
-  height: auto;
+.doc-tree {
+  padding: 30px 15px 30px 30px;
 }
 
-.volume * {
+.doc-tree>h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px;
+}
+
+.doc-tree ul>li {
+  margin-left: 1em;
+}
+
+.doc-tree>ul>li {
+  margin-left: 0;
+}
+
+.doc-tree>ul {
+  line-height: 1.2em;
+}
+
+.doc-tree span {
+  text-shadow: 1px 1px 1px;
+}
+
+.doc-tree span:hover {
+  color: #999;
+  cursor: pointer;
+}
+
+.doc-tree-taggle {
+  width: 15px;
+  height: 100%;
+  display: inherit;
+}
+
+.doc-tree-taggle>button {
+  width: 4px;
+  height: 60px;
+  margin: auto 5.5px;
+  border-radius: 2px;
+  background-color: #bbb;
+}
+
+.drawer>.doc-tree {
   display: none;
-}
-
-.volume>span {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-color: rgba(0, 0, 255, 0.3);
 }
 
 
 /* article */
 
 article {
-  display: inline-block;
-  background-color: #ddd;
   flex: 1;
-  height: 1000px;
+  min-height: 100vh;
+  min-width: 10vw;
+  background-size: 100% 100%;
+}
+
+article>section {
+  margin: 0 24px 24px 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+}
+
+
+/* nav */
+
+article nav {
+  display: flex;
+  padding: 0 48px 64px 48px;
+  margin-bottom: -64px;
+  background-color: #666;
+}
+
+article nav>ul {
+  padding: 32px 0;
+  display: inherit;
+  color: #fff;
+}
+
+article nav>ul:first-child {
+  flex: 1;
+}
+
+article nav>ul>li {
+  padding-right: 1em;
+}
+
+article nav>ul>li:last-child {
+  padding-right: 0;
+}
+
+article nav>ul a {
+  color: #fff;
+}
+
+article nav>ul a:hover {
+  color: #ddd;
 }
