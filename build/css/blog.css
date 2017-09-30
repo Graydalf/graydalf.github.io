@@ -43,7 +43,6 @@ aside {
   margin-bottom: 30px;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 1px 1px;
 }
 
 .doc-tree ul>li {
@@ -59,7 +58,7 @@ aside {
 }
 
 .doc-tree span {
-  text-shadow: 1px 1px 1px;
+  font-weight: bold;
 }
 
 .doc-tree span:hover {
